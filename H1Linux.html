@@ -1,0 +1,50 @@
+
+<h1>Raportti – Teemu Antola</h1>
+
+<h2>Raportointiohjeet</h2> 
+<ul> 
+    <li>Raportoi ympäristö</li> 
+    <li>Raportoi annetut komennot ja klikkaukset</li> 
+    <li>Kirjoita imperfektissä</li> 
+    <li>Raportoi viat</li> 
+    <li>Käytä väliotsikoita</li> 
+    <li>Kirjoita huolellista kieltä</li> 
+    <li>Viittaa lähteisiin</li> 
+</ul>
+
+<h2>a) VirtualBoxin asennus</h2> 
+<p> Aluksi menin verkkosivulle virtualbox.org. VirtualBoxin verkkosivulta asensin VirtualBox 7.2.4 platform packages – Windows hosts -version. 
+    Asennuksen aikana tuli esiin vaihe “Missing dependencies”, jossa asennus ilmoitti Python Core Package -komponentin puuttumisesta. 
+    Tästä huolimatta VirtualBoxin asennus sujui ilman muita vaikeuksia. 
+</p>
+
+<h2>Linuxin asennus</h2> 
+
+<p> Laitteena käytin TUF Gaming FX505DT_FX505DT -tietokonetta. Käyttöjärjestelmänä oli Microsoft Windows 11 Home. VirtualBoxissa painoin Machine → New. 
+</p>
+
+<p> Tämän jälkeen hain Googlesta hakusanalla “Debian live iso” ja siirryin debian.org-verkkosivulle. Latasin sivulta Live GNOME -linkistä ISO-tiedoston.    
+</p>
+
+<p> 
+    Asetin virtuaalikoneelle Base memoryksi 4000 MB ja suorittimien määräksi 4. Virtuaaliselle kiintolevylle annoin tilaa 40 GB. Tämän jälkeen painoin Finish ja loin virtuaalikoneen. 
+</p>
+
+<p> Menin virtuaalikoneen Storage-asetuksiin ja liitin lataamani Debian ISO -tiedoston virtuaaliseksi CD-ROM-levyksi. </p>
+
+<h2>Käynnistys</h2> 
+<p> 
+    Käynnistin virtuaalikoneen, mutta käynnistys epäonnistui. Virheilmoitus oli “Not in a hypervisor partition – AMD-V is disabled in the BIOS”. Tämän vuoksi siirryin laitteen BIOS-asetuksiin ja otin käyttöön SVM-mode-asetuksen. 
+</p>
+
+<p> 
+    Kokeilin käynnistää virtuaalikoneen uudelleen, ja se käynnistyi onnistuneesti. Valitsin käynnistysvalikosta “Live system (amd64)”. 
+</p>
+
+<p> 
+    Tämän jälkeen näyttöön ilmestyi virheilmoitus: “This kernel requires an x86-64 CPU, but only detected an i686 CPU”. Korjasin ongelman menemällä virtuaalikoneen asetuksiin ja vaihtamalla käyttöjärjestelmän version 32-bittisestä 64-bittiseksi. 
+</p>
+<p> 
+    Asetuksen muuttamisen jälkeen virtuaalikone käynnistyi ongelmitta, ja Linux-käyttöjärjestelmä saatiin käynnistettyä onnistuneesti. 
+</p>
+
